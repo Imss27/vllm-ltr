@@ -9,7 +9,7 @@ CUDA_VISIBLE_DEVICES=0 python benchmark_throughput_original.py --dataset PO-gen-
 # Run benchmark with mlfq-quant0.03-thres2 schedule
 echo "=========================================================="
 echo "Running benchmark with schedule type: mlfq-quant0.03-thres2"
-CUDA_VISIBLE_DEVICES=0 python benchmark_throughput_original.py --dataset lmsys-Meta-Llama-3-8B-Instruct-t1.0-s0-l8192-c10000-rFalse.jsonl --model meta-llama/Meta-Llama-3-8B-Instruct --num-prompts 2000 --schedule-type mlfq-quant0.03-thres2 --enable-chunked-prefill --enforce-eager --swap-space 10 --dir BURST 
+CUDA_VISIBLE_DEVICES=0 python benchmark_throughput_original.py --dataset lmsys-Meta-Llama-3-8B-Instruct-t1.0-s0-l8192-c10000-rFalse.jsonl --model meta-llama/Meta-Llama-3-8B-Instruct --num-prompts 2000 --schedule-type mlfq-quant0.03-thres2 --enable-chunked-prefill --enforce-eager --swap-space 30 --dir BURST 
 
 
 # Run benchmark with opt-xxx schedule
