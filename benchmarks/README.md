@@ -8,7 +8,7 @@ To download pre-generated data, run:
 
 ```bash
 huggingface-cli download LLM-ltr/Llama3-Trace --local-dir ./Llama3-Trace --repo-type dataset
-mv Llama3-Trace/*.jsonl .
+mv Llama3-Trace/*.jsonl ./benchmarks
 ```
 
 To download ShareGPT data, run:
