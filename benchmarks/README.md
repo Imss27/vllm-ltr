@@ -54,6 +54,7 @@ or check the `vllm-ltr/train` directory for training predictors.
 ### Reproduce Table 1
 
 ```bash
+cd benchmarks
 mkdir BURST
 bash burst-lmsys.sh        # lmsys/8B
 bash burst-sharegpt.sh     # sharegpt/8B
