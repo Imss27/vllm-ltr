@@ -8,7 +8,7 @@ To download pre-generated data, run:
 
 ```bash
 huggingface-cli download LLM-ltr/Llama3-Trace --local-dir ./Llama3-Trace --repo-type dataset
-mv Llama3-Trace/*.jsonl .
+mv Llama3-Trace/*.jsonl ./benchmarks
 ```
 
 To download ShareGPT data, run:
@@ -43,6 +43,7 @@ python benchmark_append_dataset_PO.py --dataset llama3-8b-sharegpt-test-t1-s0-81
 For predictor downloads, you can simply use:
 
 ```bash
+cd benchmarks
 mkdir -p MODEL/results
 huggingface-cli download LLM-ltr/OPT-Predictors --local-dir MODEL/results
 ```
@@ -54,6 +55,7 @@ or check the `vllm-ltr/train` directory for training predictors.
 ### Reproduce Table 1
 
 ```bash
+# under benchmarks directory
 mkdir BURST
 bash burst-lmsys.sh        # lmsys/8B
 bash burst-sharegpt.sh     # sharegpt/8B
